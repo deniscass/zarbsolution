@@ -1,0 +1,16 @@
+<header ng-switch on="$location.path().indexOf('/Mapas/new') > -1">
+    <h3 ng-switch-when="true">Create a new Mapa</h3>
+    <h3 ng-switch-when="false">View or edit Mapa</h3>
+</header>
+<form id="MapaForm" name="MapaForm" class="form-horizontal" role="form">
+    
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button id="saveMapa" name="saveMapa" class="btn btn-primary" ng-disabled="isClean() || MapaForm.$invalid" ng-click="save()"><span class="glyphicon glyphicon-ok-sign"></span> Save</button>
+            <button id="cancel" name="cancel" class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</button>
+            <button id="deleteMapa" name="deleteMapa" class="btn btn-danger" ng-show="mapa.id" ng-click="remove()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        </div>
+    </div>
+</form>

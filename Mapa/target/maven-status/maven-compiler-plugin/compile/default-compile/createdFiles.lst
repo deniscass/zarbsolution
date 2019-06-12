@@ -1,0 +1,3 @@
+org/Mapa/model/Mapa.class
+org/Mapa/rest/MapaEndpoint.class
+org/Mapa/rest/RestApplication.class
